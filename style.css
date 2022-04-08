@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    font-family: 'Roboto';
+    --primary-color: #359191;
+    --neutral-color: #cfddf0;
+    ;
+}
+
+body {
+    margin: 0;
+}
+
+.header,
+.projectContainer,
+.announementsContainer,
+.trendingContainer {
+    box-shadow: 1px 5px 5px rgb(177, 177, 216);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: min-content 1fr;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    z-index: 1;
+    grid-column: 2;
+    grid-row: 1;
+    background-color: white;
+}
+
+.header > div {
+    margin: 1rem 2rem;
+}
+
+.header .search {
+    height: auto;
+    display: grid;
+    grid-template-columns: min-content minmax(min-content,100ch) minmax(min-content,1fr) min-content max-content;
+    align-items: center;
+    grid-gap: 15px;
+}
+
+.header .search .notifications {
+    justify-self: end;
+    padding: 1rem;
+}
+
+.header .quickTasks {
+    height: auto;
+    display: grid;
+    grid-template-columns: min-content minmax(min-content,1fr) repeat(3, 100px);
+    align-items: center;
+    grid-gap: 15px;
+}
+
+.avatarContainer {
+    height: 80px;
+    width: 80px;
+    border-radius: 10rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #679494;
+    display: inline-grid;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(226, 255, 255);
+}
+
+.avatar.small {
+    height: 32px;
+    width: 32px;
+}
+
+.avatarContainer.small {
+    height: 40px;
+    width: 40px;
+}
+
+.avatar {
+    height: 64px;
+    width: 64px;
+}
+
+.greeting {
+    display: inline-block;
+}
+
+.header .userName {
+    font-size: 1.3rem;
+}
+
+.header .fullUserName {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header input[type=search] {
+    background-color:var(--neutral-color);
+    border-radius: 1rem;
+    padding: .5rem;
+    border-style: none;
+}
+
+.header button {
+    background-color: var(--primary-color); 
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 3rem;
+    border-style: none;
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.sidebar .nav {
+    display: grid;
+    grid-template-columns: min-content 200px;
+    margin: 2rem;
+    grid-gap: 35px 15px;
+    color: white;
+}
+
+.sidebar span {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.nav > img {
+    justify-self: center;
+}
+
+.nav > img.large {
+    height: 36px;
+    width: 36px;
+}
+
+.nav > span.large {
+    font-size: 2em;
+}
+
+.content {
+    padding: 1rem;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--neutral-color);
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.5rem;
+}
+
+.content > div {
+    margin: 0.5rem;
+}
+
+.content .projects {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.content .announements {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.content .trending {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.content h1 {
+    font-size: 1.3em;
+    font-weight: 400; 
+}
+
+.projectsGrid {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30ch,1fr));
+    grid-gap: 1rem;
+}
+
+.content .projects h2 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.projectContainer {
+    padding: 1.5rem 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    border-width: 0;
+    border-left-width: 0.5rem;
+    border-style: solid;
+    border-color: rgb(201, 151, 164);
+    height: auto;
+    
+}
+
+
+.projectButtons {
+    margin: 1rem;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr min-content min-content min-content;
+    grid-gap: 1rem;
+}
+
+.announementsContainer {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 2px min-content 2px min-content;
+    justify-items: center;
+    padding: 1.5rem 1.5rem;
+}
+
+.announementsContainer > .divider {
+    background-color: rgb(221, 221, 221);
+    border-radius: 1rem;
+    width: 90%;
+}
+
+.announementsContainer > .announcementContent {
+}
+
+.announementsContainer h2 {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.announementsContainer p {
+    font-size: .7em;
+    font-weight: 400;
+}
+
+.trending {
+    margin-top: 2rem;
+}
+
+.trendingContainer {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    justify-items: start;
+    padding: 1.5rem 1.5rem;
+    grid-gap: 1rem;
+}
+
+.trendingText {
+    align-self: center;
+}
+
+.trendingUserHandle {
+    font-weight: 500;
+}
+
+.trendingProject {
+    font-size: 0.8rem;
+}
